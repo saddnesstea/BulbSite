@@ -1,7 +1,9 @@
 const colorPicker = document.getElementById('colorPicker');
 
 function toggle() {
-    fetch('https://6155-37-204-52-76.ngrok-free.app/toggle')
+    button.addEventListener("click", function() {
+        fetch("https://6155-37-204-52-76.ngrok-free.app/toggle");
+      });
 }
 
 let currentColor = colorPicker.value
