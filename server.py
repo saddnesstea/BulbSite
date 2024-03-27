@@ -24,6 +24,26 @@ def set_color():
     else:
         return 'No color data received'
 
+@app.route('/set-brightness', methods=['POST'])
+def set_brightness():
+    data = request.json
+    if data:
+        brightness = int(data['brightness'])
+        device.send('set_bright', [brightness])
+        return 'brightness set successfully'
+    else:
+        return 'No brightness data received'
+
+@app.route('/set-temperature', methods=['POST'])
+def set_temperature():
+    data = request.json
+    if data:
+        temperature = int(data['temperature'])
+        device.send('set_ct_abx', [temperature])
+        return 'temperature set successfully'
+    else:
+        return 'No temperature data received'
+
 @app.route('/toggle', methods=['POST', 'GET'])
 def toggle():
     device.send('toggle')
