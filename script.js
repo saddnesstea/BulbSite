@@ -2,7 +2,9 @@ const colorPicker = document.getElementById('colorPicker');
 const button = document.getElementById("toggleButton");
 
 function toggle() {
-    fetch("https://6155-37-204-52-76.ngrok-free.app/toggle");
+    fetch("https://6155-37-204-52-76.ngrok-free.app/toggle", {
+        method: 'POST'
+    });
 }
 
 let currentColor = colorPicker.value
