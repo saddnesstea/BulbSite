@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #f0f0f0;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .toggle-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: linear-gradient(45deg, #4CAF50, #2196F3);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .toggle-button:hover {
+    background: linear-gradient(45deg, #45a049, #1e90ff);
+  }
+  
+  .color-picker {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 38px;
+  }
+  
